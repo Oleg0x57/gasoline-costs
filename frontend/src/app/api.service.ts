@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export const EXPENDS: any[] = [
   {
@@ -27,9 +28,11 @@ export const EXPENDS: any[] = [
 })
 export class ApiService {
 
-  constructor() { }
+  apiUrl: string = 'http://localhost:8080/api/v1/expends';
+
+  constructor(private http: HttpClient) { }
 
   getExpends(): Observable<any[]> {
-    return of(EXPENDS);
+    return this.http.get<any[]>(this.apiUrl);
   }
 }
