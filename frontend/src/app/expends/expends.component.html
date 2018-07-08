@@ -1,0 +1,24 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Odo</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let expend of expends">
+      <td>{{expend.id}}</td>
+      <td>{{expend.date}}</td>
+      <td>{{expend.type}}</td>
+      <td>{{expend.odo}}</td>
+      <td>{{expend.price}}</td>
+      <td>{{expend.quantity}}</td>
+      <td>{{expend.sum}}</td>
+    </tr>
+  </tbody>
+</table>
