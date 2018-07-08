@@ -1,0 +1,43 @@
+#%RAML 1.0
+---
+title: accounting of gasoline costs API
+baseUri: http://api.gasoline-costs.com/{version}
+version: v1
+/expends:
+  get:
+    responses:
+      '200':
+        description: Get a list of records
+        body:
+          application/json:
+            example:
+              records:
+                - id: 1
+                  date: 01-07-2018
+                  type: 95
+                  odo: 190000
+                  price: 42
+                  quantity: 30
+                  sum: 1260
+                - id: 2
+                  date: 06-07-2018
+                  type: 95
+                  odo: 190100
+                  price: 42
+                  quantity: 10
+                  sum: 420
+            type: object
+  post:
+    responses:
+      '200': {}
+    body:
+      application/json:
+        description: 'description: Add a new record to list'
+        example:
+          date: 08-07-2018
+          type: 95
+          odo: 190140
+          price: 42
+          quantity: 15
+          sum: 630
+        type: object
