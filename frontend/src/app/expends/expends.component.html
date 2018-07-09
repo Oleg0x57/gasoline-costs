@@ -1,24 +1,6 @@
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Date</th>
-      <th>Type</th>
-      <th>Odo</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Sum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let expend of expends">
-      <td>{{expend.id}}</td>
-      <td>{{expend.date}}</td>
-      <td>{{expend.type}}</td>
-      <td>{{expend.odo}}</td>
-      <td>{{expend.price}}</td>
-      <td>{{expend.quantity}}</td>
-      <td>{{expend.sum}}</td>
-    </tr>
-  </tbody>
-</table>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#" (click)="selectTable()">Table</a></li>
+  <li role="presentation"><a href="#" (click)="selectChart()">Chart</a></li>
+</ul>
+<div *ngIf="isTable"><app-expends-table [records]="expends"></app-expends-table></div>
+<div *ngIf="isChart"><app-expends-chart [records]="expends"></app-expends-chart></div>

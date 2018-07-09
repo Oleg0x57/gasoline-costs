@@ -1,0 +1,24 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Odo</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of records">
+      <td>{{record.id}}</td>
+      <td>{{record.date}}</td>
+      <td>{{record.type}}</td>
+      <td>{{record.odo}}</td>
+      <td>{{record.price}}</td>
+      <td>{{record.quantity}}</td>
+      <td>{{record.sum}}</td>
+    </tr>
+  </tbody>
+</table>

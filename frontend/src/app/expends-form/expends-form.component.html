@@ -1,0 +1,27 @@
+<form class="form-inline" (ngSubmit)="onSubmit()" #expendForm="ngForm">
+  <div class="form-group">
+    <label for="dateInput">date</label>
+    <input name="date" class="form-control" id="dateInput" placeholder="date" [(ngModel)]="model.date">
+  </div>
+  <div class="form-group">
+    <label for="typeInput">type</label>
+    <input name="type" class="form-control" id="typeInput" placeholder="type" [(ngModel)]="model.type">
+  </div>
+  <div class="form-group">
+    <label for="odoInput">odo</label>
+    <input name="odo" class="form-control" id="odoInput" placeholder="odo" [(ngModel)]="model.odo">
+  </div>
+  <div class="form-group">
+    <label for="priceInput">price</label>
+    <input name="price" class="form-control" id="priceInput" placeholder="price" [(ngModel)]="model.price">
+  </div>
+  <div class="form-group">
+    <label for="quantityInput">quantity</label>
+    <input name="quantity" class="form-control" id="quantityInput" placeholder="quantity" [(ngModel)]="model.quantity">
+  </div>
+  <div class="form-group">
+    <label for="sumInput">sum</label>
+    <input name="sum" class="form-control" id="sumInput" placeholder="sum" [(ngModel)]="model.sum">
+  </div>
+  <button type="submit" class="btn btn-default" [disabled]="!expendForm.form.valid">add</button>
+</form>
